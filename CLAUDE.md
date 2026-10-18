@@ -44,10 +44,10 @@ python -m py_compile Home.py utils/*.py pages/*.py
 
 ## 開発環境に関する注意点
 
-- **このディレクトリはまだgitリポジトリではない**（`.git`が存在しない）。コミットやブランチ操作を求められた場合は、先に`git init`が必要になる点に注意。
+- **GitHubリポジトリ**: https://github.com/Gakkun0610/ai-writing-tool （Private、ブランチ `main`）。`security-report-*.md` は `.gitignore` で除外している。
 - 作業ディレクトリのパスに**スペースと日本語文字**を含む（`...\デスクトップ\cursor学習用\AI writing tool`）。Bashツール経由でコマンドを実行する場合は、パスを必ずダブルクォートで囲むこと。
 - `.venv`（仮想環境）と`.env`（APIキー入りの実ファイル）はこのマシン上に既に作成済みで、どちらも`.gitignore`済み。再作成の指示がない限り、`python -m venv .venv`を再実行する必要はない。
-- 動作確認済みの依存バージョン：Python 3.14.6 / streamlit 1.64.0 / google-genai 2.25.0 / python-dotenv 1.2.3。`requirements.txt`は下限指定（`>=`）のみなので、将来的にこれより新しいバージョンが入る可能性がある。
+- 動作確認済みの依存バージョン：Python 3.14.6 / streamlit 1.64.0 / google-genai 2.25.0 / python-dotenv 1.2.3。`requirements.txt`はこれらのバージョンに`==`で固定している。
 - Streamlitはポートが使用中だと起動に失敗する（`Port 8501 is not available`）。動作確認のためにアプリを起動する際は、既存プロセスが残っていないか確認するか、`--server.port`で別ポートを指定すること。
 
 ## UIの言語と規約
